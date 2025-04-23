@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "0f156917-8046-4218-a963-5b4770f5555d",
+		"name": "CodeBoxx School m09-10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14966913"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}users",
+							"host": [
+								"{{baseURL}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}user/6479df5171f7b2cbc14926af",
+							"host": [
+								"{{baseURL}}user"
+							],
+							"path": [
+								"6479df5171f7b2cbc14926af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    // {\n    //     \"first_name\": \"John\",\n    //     \"last_name\": \"doe\",\n    //     \"birthday\": \"2013-05-12\",\n    //     \"email\": \"john@doe.com\",\n    //     \"password\": \"P455w0rd\",\n    //     \"status\": \"J'aime rien!\",\n    //     \"location\": \"Ruelle\",\n    //     \"occupation\": \"Mandiant\",\n    //     \"auth_level\": \"basic\"\n    // }\n\n    {\n        \"first_name\": \"John\",\n        \"last_name\": \"snow\",\n        \"birthday\": \"2013-05-12\",\n        \"email\": \"john@snow.com\",\n        \"password\": \"P455w0rd\",\n        \"status\": \"J'aime la neige!\",\n        \"location\": \"North\",\n        \"occupation\": \"King\",\n        \"auth_level\": \"admin\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}user/register",
+							"host": [
+								"{{baseURL}}user"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"Je suis un nouveau Status\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}user/6479df5171f7b2cbc14926af",
+							"host": [
+								"{{baseURL}}user"
+							],
+							"path": [
+								"6479df5171f7b2cbc14926af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}user/6470f469d387801f5599928d",
+							"host": [
+								"{{baseURL}}user"
+							],
+							"path": [
+								"6470f469d387801f5599928d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "infos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}infos",
+							"host": [
+								"{{baseURL}}infos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}info/6477c24e5c0e8a80f8cc080e",
+							"host": [
+								"{{baseURL}}info"
+							],
+							"path": [
+								"6477c24e5c0e8a80f8cc080e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sessions",
+			"item": [
+				{
+					"name": "session/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"john@snow.com\",\n    \"password\":\"P455w0rd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}session/login",
+							"host": [
+								"{{baseURL}}session"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "session",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"john@doe.com\",\n    \"password\":\"P455word\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}session",
+							"host": [
+								"{{baseURL}}session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "session/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}session/646cbd19f799dd771d0dbfe3",
+							"host": [
+								"{{baseURL}}session"
+							],
+							"path": [
+								"646cbd19f799dd771d0dbfe3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "session/logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}session/logout",
+							"host": [
+								"{{baseURL}}session"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "session/:id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}session/6479df5171f7b2cbc14926af",
+							"host": [
+								"{{baseURL}}session"
+							],
+							"path": [
+								"6479df5171f7b2cbc14926af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate_token?token=query",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}validate_token?token=abe71d35-63de-4464-a108-cd12d225e6e4",
+							"host": [
+								"{{baseURL}}validate_token"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "abe71d35-63de-4464-a108-cd12d225e6e4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}post",
+							"host": [
+								"{{baseURL}}post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}post/6470fb016f5560c7db029d1a",
+							"host": [
+								"{{baseURL}}post"
+							],
+							"path": [
+								"6470fb016f5560c7db029d1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"I am a Post #3!\",\n    \"user_id\": \"6479df2c71f7b2cbc14926ae\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}post",
+							"host": [
+								"{{baseURL}}post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post/:id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"likes\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}6479e1e3c3cd61043250fb62",
+							"host": [
+								"{{baseURL}}6479e1e3c3cd61043250fb62"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post/:id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"likes\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}post/647605672f73d20d20314e51",
+							"host": [
+								"{{baseURL}}post"
+							],
+							"path": [
+								"647605672f73d20d20314e51"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}comment",
+							"host": [
+								"{{baseURL}}comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}comment/6477c29b5c0e8a80f8cc0812",
+							"host": [
+								"{{baseURL}}comment"
+							],
+							"path": [
+								"6477c29b5c0e8a80f8cc0812"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"I am a comment #3!\",\n    \"post_id\": \"6479e1e3c3cd61043250fb62\",\n    \"user_id\": \"6479df5171f7b2cbc14926af\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}comment",
+							"host": [
+								"{{baseURL}}comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"I LOVE this Comment #1!\",\n    \"likes\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}comment/6479f6d601a76b29636855cf",
+							"host": [
+								"{{baseURL}}comment"
+							],
+							"path": [
+								"6479f6d601a76b29636855cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"I LOVE this Comment #1!\",\n    \"likes\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/comment/6470f505d387801f55999291",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comment",
+								"6470f505d387801f55999291"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:5050/",
+			"type": "string"
+		}
+	]
+}
